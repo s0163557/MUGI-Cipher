@@ -1,0 +1,74 @@
+﻿<Window x:Class="MUGI_Cipher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MUGI_Cipher"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center">
+            <Label Content="Зашифровать текст:"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="EncryptText"/>
+            
+            <Label Content="Секретный ключ:"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="EncryptKey"/>
+            
+            <Label Content="Инициализирующий вектор:"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="EncryptVector"/>
+            
+            <Button Content="Зашифровать!" Margin="10,10,10,10" Click="EncryptButton_Click"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="EncryptResult"
+                     IsReadOnly="True"
+                     BorderThickness="0"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" 
+                    Grid.Column="1">
+            <Label Content="Расшифровать текст:"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="DecryptText"/>
+            
+            <Label Content="Секретный ключ:"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="DecryptKey"/>
+
+            <Label Content="Инициализирующий вектор:"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="DecryptVector"/>
+            
+            <Button Content="Расшифровать!" Margin="10,10,10,10" Click="Button_Click"/>
+            <TextBox Margin="10,10,10,10"
+                TextWrapping="Wrap"
+                     MaxWidth="200"
+                     Name="DecryptResult"
+                     IsReadOnly="True"
+                     BorderThickness="0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
